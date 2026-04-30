@@ -80,16 +80,16 @@ logs/
 .env.*.local
 
 # Data files (large)
-*.csv
-data/raw/
-data/interim/
+# *.csv
+# data/raw/
+# data/interim/
 
 # Models (large)
-*.pkl
-*.joblib
-*.h5
-*.pth
-models/old/
+# *.pkl
+# *.joblib
+# *.h5
+# *.pth
+# models/old/
 
 # Cache
 .cache/
