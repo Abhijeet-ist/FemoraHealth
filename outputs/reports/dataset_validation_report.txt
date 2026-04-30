@@ -1,0 +1,59 @@
+PCOS DATASET — VALIDATION REPORT
+======================================================================
+Generated on: 2026-04-14 17:08:18
+
+--- PRE-CLEANING ---
+
+======================================================================
+  DATASET VALIDATION REPORT — PRE-CLEANING
+======================================================================
+
+📐 Shape: 541 rows × 45 columns
+💾 Memory Usage: 228.77 KB
+
+📊 Data Types:
+   • int64: 23 columns
+   • float64: 19 columns
+   • object: 3 columns
+
+❌ Missing Values: 541 total across 3 columns
+   • Unnamed: 44: 539 (99.63%)
+   • Marraige Status (Yrs): 1 (0.18%)
+   • Fast food (Y/N): 1 (0.18%)
+
+🔄 Duplicate Rows: 0
+
+📈 Numeric Columns: 42
+📝 Categorical/Object Columns: 3
+
+--- POST-CLEANING ---
+
+======================================================================
+  DATASET VALIDATION REPORT — POST-CLEANING
+======================================================================
+
+📐 Shape: 541 rows × 42 columns
+💾 Memory Usage: 177.64 KB
+
+📊 Data Types:
+   • int64: 21 columns
+   • float64: 21 columns
+
+❌ Missing Values: 0 total across 0 columns
+
+🔄 Duplicate Rows: 0
+
+📈 Numeric Columns: 42
+📝 Categorical/Object Columns: 0
+
+--- FEATURE SUMMARY ---
+Target: PCOS
+Binary Features: ['Pregnant', 'Weight_Gain', 'Hair_Growth', 'Skin_Darkening', 'Hair_Loss', 'Pimples', 'Fast_Food', 'Regular_Exercise']
+Continuous Features: ['Age', 'Weight_Kg', 'Height_Cm', 'BMI', 'Hemoglobin', 'Marriage_Yrs', 'Beta_HCG_I', 'Beta_HCG_II', 'FSH', 'LH', 'FSH_LH_Ratio', 'Hip', 'Waist', 'Waist_Hip_Ratio', 'TSH', 'AMH', 'Prolactin', 'Vit_D3', 'Progesterone', 'RBS', 'Follicle_L', 'Follicle_R', 'Avg_Follicle_Size_L', 'Avg_Follicle_Size_R', 'Endometrium']
+Discrete Features: ['Blood_Group', 'Pulse_Rate', 'Resp_Rate', 'Cycle_RI', 'Cycle_Length', 'BP_Systolic', 'BP_Diastolic']
+
+--- TARGET DISTRIBUTION ---
+PCOS
+0    364
+1    177
+Positive Rate: 32.7%

@@ -1,0 +1,24 @@
+PCOS — MODEL COMPARISON REPORT
+============================================================
+
+Best Model: Random Forest
+Features used: 32
+Train samples: 432 (after SMOTE: 582)
+Test samples: 109
+
+Model                     Accuracy     Precision    Recall       F1           AUC         
+-------------------------------------------------------------------------------------
+Logistic Regression       0.8991       0.8378       0.8611       0.8493       0.9399      
+Decision Tree             0.8807       0.7674       0.9167       0.8354       0.8898      
+Random Forest             0.9174       0.9091       0.8333       0.8696       0.9583      
+SVM                       0.9174       0.8857       0.8611       0.8732       0.9543      
+KNN                       0.8165       0.6600       0.9167       0.7674       0.9180      
+XGBoost                   0.9083       0.8611       0.8611       0.8611       0.9677      
+
+
+TUNED MODELS:
+-------------------------------------------------------------------------------------
+SVM (Tuned): Acc=0.8807 F1=0.8169 AUC=0.9471
+  Params: {'C': 10, 'gamma': 'scale', 'kernel': 'rbf'}
+Random Forest (Tuned): Acc=0.9174 F1=0.8696 AUC=0.9585
+  Params: {'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 300}

@@ -1,0 +1,81 @@
+======================================================================
+  PCOS PREDICTION — FINAL VALIDATION REPORT
+======================================================================
+
+Generated on: 2026-04-14 17:18:12
+
+
+==================================================
+  DATASET SUMMARY
+==================================================
+Total samples: 541
+Features used: 32
+Target: PCOS (0=364, 1=177)
+Positive rate: 32.7%
+
+
+==================================================
+  MODEL PERFORMANCE
+==================================================
+PCOS — MODEL COMPARISON REPORT
+============================================================
+
+Best Model: Random Forest
+Features used: 32
+Train samples: 432 (after SMOTE: 582)
+Test samples: 109
+
+Model                     Accuracy     Precision    Recall       F1           AUC         
+-------------------------------------------------------------------------------------
+Logistic Regression       0.8991       0.8378       0.8611       0.8493       0.9399      
+Decision Tree             0.8807       0.7674       0.9167       0.8354       0.8898      
+Random Forest             0.9174       0.9091       0.8333       0.8696       0.9583      
+SVM                       0.9174       0.8857       0.8611       0.8732       0.9543      
+KNN                       0.8165       0.6600       0.9167       0.7674       0.9180      
+XGBoost                   0.9083       0.8611       0.8611       0.8611       0.9677      
+
+
+TUNED MODELS:
+-------------------------------------------------------------------------------------
+SVM (Tuned): Acc=0.8807 F1=0.8169 AUC=0.9471
+  Params: {'C': 10, 'gamma': 'scale', 'kernel': 'rbf'}
+Random Forest (Tuned): Acc=0.9174 F1=0.8696 AUC=0.9585
+  Params: {'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 300}
+
+
+==================================================
+  SHAP ANALYSIS — TOP FEATURES
+==================================================
+  Total_Follicles                SHAP: 0.1478
+  Symptom_Score                  SHAP: 0.0834
+  Skin_Darkening                 SHAP: 0.0443
+  Weight_Gain                    SHAP: 0.0435
+  Hair_Growth                    SHAP: 0.0395
+  Fast_Food                      SHAP: 0.0285
+  Cycle_Length                   SHAP: 0.0284
+  Cycle_RI                       SHAP: 0.0250
+  AMH                            SHAP: 0.0210
+  Pimples                        SHAP: 0.0129
+  Avg_Follicle_Size              SHAP: 0.0120
+  Age                            SHAP: 0.0089
+  Avg_Follicle_Size_L            SHAP: 0.0082
+  Weight_Kg                      SHAP: 0.0073
+  Pulse_Rate                     SHAP: 0.0065
+
+
+==================================================
+  ARTIFACTS GENERATED
+==================================================
+Figures: 38 (outputs/figures/)
+Models: best_model.pkl, scaler.pkl, feature_names.pkl
+Reports: dataset_validation_report.txt, feature_selection_summary.txt,
+         model_comparison_report.txt, statistical_tests.csv
+         final_validation_report.txt
+
+
+==================================================
+  CONCLUSION
+==================================================
+Best model: RandomForestClassifier
+Key predictors (by SHAP): ['Total_Follicles', 'Symptom_Score', 'Skin_Darkening']
+Ready for Streamlit deployment ✅
