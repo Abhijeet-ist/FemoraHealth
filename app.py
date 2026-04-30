@@ -1142,7 +1142,7 @@ elif page == "ℹ️ About":
         <div class="card">
             <h4 style="color: #EC4899;">👤 Author</h4>
             <p style="color: #4B5563;">Abhijeet Kumar</p>
-            <p style="color: #9CA3AF; font-size: 0.9rem;">Data Science | Machine Learning<br>Student at INT 374</p>
+            <p style="color: #9CA3AF; font-size: 0.9rem;">Data Science | Machine Learning<br>Student at Lovely Professional University</p>
         </div>
         """, unsafe_allow_html=True)
         
