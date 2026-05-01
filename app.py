@@ -1163,6 +1163,6 @@ st.markdown("""
 <div class="footer">
     <p>🏥 <strong>FemoraHealth</strong> - PCOS Prediction Dashboard </p>
     <p>INT 374: Data Science Toolbox | University Project</p>
-    <p style="margin-top: 1rem; font-size: 0.8rem;">© 2024 All Rights Reserved</p>
+    <p style="margin-top: 1rem; font-size: 0.8rem;"></p>
 </div>
 """, unsafe_allow_html=True)
